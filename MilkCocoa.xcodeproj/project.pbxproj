@@ -10,6 +10,7 @@
 		9216A8D01BE87EDA009B9845 /* MilkCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9216A8D71BE87EDA009B9845 /* MilkCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9216A8CC1BE87EDA009B9845 /* MilkCocoa.framework */; };
 		9216A8DC1BE87EDA009B9845 /* MilkCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */; };
+		9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9216A8D61BE87EDA009B9845 /* MilkCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilkCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkCocoaTests.swift; sourceTree = "<group>"; };
 		9216A8DD1BE87EDA009B9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkCocoa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */,
 				9216A8D11BE87EDA009B9845 /* Info.plist */,
+				9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */,
 			);
 			path = MilkCocoa;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		9216A8E11BE87EDA009B9845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = shuheihiya.MilkCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9216A8E21BE87EDA009B9845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
