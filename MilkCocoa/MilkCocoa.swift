@@ -44,9 +44,10 @@ public class MilkCocoa : CocoaMQTTDelegate {
         self.dataStores = Dictionary<String, DataStore>()
         self.onConnect = onConnect
         let clientIdPid = "sw" + String(NSProcessInfo().processIdentifier)
-        self.mqtt = CocoaMQTT(clientId: clientIdPid, host: host, port: 1883)
+        self.mqtt = CocoaMQTT(clientId: clientIdPid, host: host, port: 8883)
         self.mqtt.username = "sdammy"
         self.mqtt.password = app_id
+        self.mqtt.secureMQTT = true
         self.mqtt.cleanSess = false
         //mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
         self.mqtt.keepAlive = 36
