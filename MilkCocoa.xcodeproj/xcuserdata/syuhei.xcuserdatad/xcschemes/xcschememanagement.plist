@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MilkCocoa-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>MilkCocoa.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>9216A8D51BE87EDA009B9845</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92C58F4B1C0CC03A001B5FE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
