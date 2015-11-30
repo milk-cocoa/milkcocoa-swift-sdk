@@ -24,13 +24,20 @@ class MilkCocoaTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let milkcocoa = MilkCocoa(app_id: "vuei9dh5mu3", host: "vuei9dh5mu3.mlkcca.com")
-        let ds = milkcocoa.dataStore("aaa")
-        ds.on("send", callback: {params in
-            NSLog("Recv Send")
+        let exp:XCTestExpectation = self.expectationWithDescription("send")
+        let milkcocoa = MilkCocoa(app_id: "vuei9dh5mu3", host: "vuei9dh5mu3.mlkcca.com", onConnect: {milkcocoa in
+            let ds = milkcocoa.dataStore("aaa")
+            ds.on("send", callback: {params in
+                NSLog("Recv Send")
+                XCTAssert(true, "Pass")
+                exp.fulfill()
+            })
+            ds.send([
+                "content":"Hello"])
         })
-        ds.send([
-            "content":"Hello"])
+        self.waitForExpectationsWithTimeout(5000, handler: {error in
+            
+        })
     }
     
     func testPerformanceExample() {

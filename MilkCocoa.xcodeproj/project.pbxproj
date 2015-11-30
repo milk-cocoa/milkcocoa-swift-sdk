@@ -23,10 +23,17 @@
 /* Begin PBXBuildFile section */
 		9216A8D01BE87EDA009B9845 /* MilkCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9216A8D71BE87EDA009B9845 /* MilkCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9216A8CC1BE87EDA009B9845 /* MilkCocoa.framework */; };
-		9216A8DC1BE87EDA009B9845 /* MilkCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */; };
 		9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */; };
 		9216A8E91BE87FFE009B9845 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8E81BE87FFE009B9845 /* DataStore.swift */; };
-		92C58F4A1C0CBF1F001B5FE5 /* CocoaMQTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C58F491C0CBF1F001B5FE5 /* CocoaMQTT.framework */; };
+		92C58F5B1C0CD47B001B5FE5 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92C58F5C1C0CD47B001B5FE5 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */; };
+		92C58F5E1C0CD47B001B5FE5 /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92C58F5F1C0CD47B001B5FE5 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */; };
+		92C58F611C0CD47B001B5FE5 /* CocoaMQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */; };
+		92C58F631C0CD47B001B5FE5 /* CocoaMQTTFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */; };
+		92C58F651C0CD47B001B5FE5 /* CocoaMQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */; };
+		92C58F671C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92C58F741C0CE5AD001B5FE5 /* MilkCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +55,14 @@
 		9216A8DD1BE87EDA009B9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkCocoa.swift; sourceTree = "<group>"; };
 		9216A8E81BE87FFE009B9845 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		92C58F491C0CBF1F001B5FE5 /* CocoaMQTT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaMQTT.framework; sourceTree = "<group>"; };
+		92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
+		92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTT.swift; sourceTree = "<group>"; };
+		92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTFrame.swift; sourceTree = "<group>"; };
+		92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTMessage.swift; sourceTree = "<group>"; };
+		92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MilkCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C58F4A1C0CBF1F001B5FE5 /* CocoaMQTT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +87,6 @@
 		9216A8C21BE87EDA009B9845 = {
 			isa = PBXGroup;
 			children = (
-				92C58F491C0CBF1F001B5FE5 /* CocoaMQTT.framework */,
 				9216A8CE1BE87EDA009B9845 /* MilkCocoa */,
 				9216A8DA1BE87EDA009B9845 /* MilkCocoaTests */,
 				9216A8CD1BE87EDA009B9845 /* Products */,
@@ -93,6 +105,14 @@
 		9216A8CE1BE87EDA009B9845 /* MilkCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */,
+				92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */,
+				92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */,
+				92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */,
+				92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */,
+				92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */,
+				92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */,
+				92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */,
 				9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */,
 				9216A8D11BE87EDA009B9845 /* Info.plist */,
 				9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */,
@@ -118,6 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9216A8D01BE87EDA009B9845 /* MilkCocoa.h in Headers */,
+				92C58F671C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h in Headers */,
+				92C58F5E1C0CD47B001B5FE5 /* MSWeakTimer.h in Headers */,
+				92C58F5B1C0CD47B001B5FE5 /* GCDAsyncSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C58F5C1C0CD47B001B5FE5 /* GCDAsyncSocket.m in Sources */,
+				92C58F611C0CD47B001B5FE5 /* CocoaMQTT.swift in Sources */,
+				92C58F5F1C0CD47B001B5FE5 /* MSWeakTimer.m in Sources */,
 				9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */,
 				9216A8E91BE87FFE009B9845 /* DataStore.swift in Sources */,
+				92C58F651C0CD47B001B5FE5 /* CocoaMQTTMessage.swift in Sources */,
+				92C58F631C0CD47B001B5FE5 /* CocoaMQTTFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9216A8DC1BE87EDA009B9845 /* MilkCocoaTests.swift in Sources */,
+				92C58F741C0CE5AD001B5FE5 /* MilkCocoaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +331,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkCocoa/MilkCocoa-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -344,6 +373,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkCocoa/MilkCocoa-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -360,6 +390,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -370,6 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = shuheihiya.MilkCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -383,6 +415,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -393,40 +426,53 @@
 				PRODUCT_BUNDLE_IDENTIFIER = shuheihiya.MilkCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
 		9216A8E41BE87EDA009B9845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MilkCocoaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shuheihiya.MilkCocoaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9216A8E51BE87EDA009B9845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MilkCocoaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shuheihiya.MilkCocoaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
 		92C58F4D1C0CC03A001B5FE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkCocoa/MilkCocoa-Universal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		92C58F4E1C0CC03A001B5FE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkCocoa/MilkCocoa-Universal-Bridging-Header.h";
 			};
 			name = Release;
 		};

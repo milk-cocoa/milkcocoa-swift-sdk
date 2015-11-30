@@ -26,7 +26,8 @@ public class DataStore {
     }
     
     public func send(params : [String: AnyObject]) {
-        self.milkcocoa.publish(self.path, event: "send", params: params)
+        self.milkcocoa.publish(self.path, event: "send", params: [
+            "params":params])
     }
     
     public func _fire_send(params : [String: AnyObject]) {

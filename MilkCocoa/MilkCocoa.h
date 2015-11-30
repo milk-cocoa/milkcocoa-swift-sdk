@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MilkCocoa/MilkCocoa-Bridging-Header.h>
+
+
 
 //! Project version number for MilkCocoa.
 FOUNDATION_EXPORT double MilkCocoaVersionNumber;

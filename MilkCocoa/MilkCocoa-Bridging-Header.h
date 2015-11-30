@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 slimpp.io. All rights reserved.
 //
 
-#ifndef CocoaMQTT_CocoaMQTT_Bridging_Header_h
-#define CocoaMQTT_CocoaMQTT_Bridging_Header_h
+#ifndef MilkCocoa_MilkCocoa_Bridging_Header_h
+#define MilkCocoa_MilkCocoa_Bridging_Header_h
 
 #import "MSWeakTimer.h"
 #import "GCDAsyncSocket.h"

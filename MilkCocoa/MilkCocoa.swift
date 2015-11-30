@@ -8,26 +8,27 @@
 
 import Foundation
 
-import CocoaMQTT
-
 public class MilkCocoa : CocoaMQTTDelegate {
     
     public let host: String
     private let app_id : String
     private let mqtt:CocoaMQTT
     private var dataStores: Dictionary<String, DataStore>
+    private var onConnect:MilkCocoa->Void
     
-    public init(app_id: String, host: String) {
+    public init(app_id: String, host: String, onConnect:MilkCocoa->Void) {
         self.app_id = app_id;
         self.host = host;
         self.dataStores = Dictionary<String, DataStore>()
-        let clientIdPid = "CocoaMQTT-" + String(NSProcessInfo().processIdentifier)
-        self.mqtt = CocoaMQTT(clientId: clientIdPid, host: "vuei9dh5mu3.mlkcca.com", port: 1883)
+        self.onConnect = onConnect
+        let clientIdPid = "sw" + String(NSProcessInfo().processIdentifier)
+        self.mqtt = CocoaMQTT(clientId: clientIdPid, host: host, port: 1883)
         self.mqtt.username = "sdammy"
-        self.mqtt.password = "vuei9dh5mu3"
+        self.mqtt.password = app_id
+        self.mqtt.cleanSess = false
         //mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
         self.mqtt.keepAlive = 36
-        self.mqtt.delegate = self;
+        self.mqtt.delegate = self
         self.mqtt.connect()
     }
     
@@ -59,6 +60,7 @@ public class MilkCocoa : CocoaMQTTDelegate {
     
     public func mqtt(mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         print("didConnectAck \(ack.rawValue)")
+        self.onConnect(self)
         //mqtt.ping()
     }
     
