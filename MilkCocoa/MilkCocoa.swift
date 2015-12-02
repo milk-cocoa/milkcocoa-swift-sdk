@@ -106,7 +106,11 @@ public class MilkCocoa : CocoaMQTTDelegate {
             let path:String = message.topic.subString(index1+1, length: index2-index1-1)
             let event:String = message.topic.subString( index2+1, length: length - index2 - 1 )
             if let ds = self.dataStores[path] {
-                ds._fire_send(content)
+                if(event == "send"){
+                    ds._fire_send(DataElement(_data:content))
+                }else if(event == "push"){
+                    ds._fire_push(DataElement(_data:content))
+                }
             }
         } catch let error as NSError {
             // Handle any errors
@@ -138,7 +142,43 @@ public class MilkCocoa : CocoaMQTTDelegate {
     func _console(info: String) {
         print("Delegate: \(info)")
     }
+
     
+    public func call(api:String, params: NSMutableDictionary, callback: (Dictionary<String, AnyObject>)->Void, error_handler: (NSError)->Void) {
+        params["api"] = api;
+        params["appid"] = self.app_id;
+        //params["mlkccasid"] = self.session_id;
+        getAsync("/api", params: params, callback: callback, error_handler: error_handler);
+    }
+    
+    private func getAsync(path : String, params: NSDictionary, callback: (Dictionary<String, AnyObject>)->Void, error_handler: (NSError)->Void) {
+        // create the url-request
+        
+        let urlString = "https://"+self.host+path + params.paramsString()
+        var request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        
+        // set the method(HTTP-GET)
+        request.HTTPMethod = "GET"
+        
+        // use NSURLSessionDataTask
+        var task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { data, response, error in
+            if (error == nil) {
+                var result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                let data = result.dataUsingEncoding(NSUTF8StringEncoding)
+                do {
+                    let content: [String: AnyObject] = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [String: AnyObject]
+                    callback(content)
+                } catch let error as NSError {
+                    // Handle any errors
+                    print(error)
+                }
+            } else {
+                error_handler(error!)
+            }
+        })
+        task.resume()
+        
+    }
 }
 
 extension String
@@ -287,5 +327,33 @@ extension String
             
             return prefix + (lastChar != lastChar.uppercaseString ? suffix : suffix.uppercaseString)
         }
+    }
+}
+
+extension NSDictionary{
+    func paramsString() -> String {
+        var pairs = NSMutableArray()
+        for (key,value) in self as! [String:AnyObject]  {
+            if value is NSDictionary {
+                for (dictKey,dictValue) in value as! [String:String]{
+                    pairs.addObject("\(key)[\(dictKey)]=\(escapString(dictValue))")
+                }
+            }else if value is NSArray {
+                for arrayValue in value as! [String] {
+                    pairs.addObject("\(key)[]=\(escapString(arrayValue))")
+                }
+            }else{
+                pairs.addObject("\(key)=\(escapString(value as! String))")
+            }
+        }
+        let queryString = pairs.componentsJoinedByString("&")
+        return "?\(queryString)"
+    }
+    
+    func escapString(value:String!) -> String {
+        // エンコードしたくない文字セットを作成
+        let customAllowedSet =  NSCharacterSet(charactersInString:"!*'()@&=+$,/?%#[];:").invertedSet
+        // 指定された文字セット以外の文字を全てパーセントエンコーディング
+        return value.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)!
     }
 }

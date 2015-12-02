@@ -9,6 +9,7 @@
 import XCTest
 @testable import MilkCocoa
 
+
 class MilkCocoaTests: XCTestCase {
     
     override func setUp() {
@@ -39,7 +40,45 @@ class MilkCocoaTests: XCTestCase {
             
         })
     }
-    
+
+    func testPush() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let exp:XCTestExpectation = self.expectationWithDescription("send")
+        let milkcocoa = MilkCocoa(app_id: "vuei9dh5mu3", host: "vuei9dh5mu3.mlkcca.com", onConnect: {milkcocoa in
+            let ds = milkcocoa.dataStore("aaa")
+            ds.on("push", callback: {params in
+                NSLog("Recv Send")
+                XCTAssert(true, "Pass")
+                exp.fulfill()
+            })
+            ds.push([
+                "content":"Hello"])
+        })
+        self.waitForExpectationsWithTimeout(5000, handler: {error in
+            
+        })
+    }
+    /*
+    func testHistory() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let exp:XCTestExpectation = self.expectationWithDescription("send")
+        let milkcocoa = MilkCocoa(app_id: "vuei9dh5mu3", host: "vuei9dh5mu3.mlkcca.com", onConnect: {milkcocoa in
+            let history = milkcocoa.dataStore("python").history()
+            history.onData({dataelements in
+                NSLog("history recv")
+                XCTAssert(true, "Pass")
+                exp.fulfill()
+            })
+            history.run()
+        })
+        self.waitForExpectationsWithTimeout(5000, handler: {error in
+            
+        })
+    }
+    */
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
