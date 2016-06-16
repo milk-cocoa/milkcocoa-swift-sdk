@@ -97,7 +97,6 @@ public class MilkCocoa : CocoaMQTTDelegate {
         print("message.payload: \(message.string)")
         
         let decided_string = message.string!.dataUsingEncoding(NSUTF8StringEncoding)
-        let nstopic : NSString = message.topic;
         do {
             let content: [String: AnyObject] = try NSJSONSerialization.JSONObjectWithData(decided_string!, options: NSJSONReadingOptions.AllowFragments) as! [String: AnyObject]
             let index1:Int = message.topic.indexOf("/");
@@ -155,15 +154,15 @@ public class MilkCocoa : CocoaMQTTDelegate {
         // create the url-request
         
         let urlString = "https://"+self.host+path + params.paramsString()
-        var request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         
         // set the method(HTTP-GET)
         request.HTTPMethod = "GET"
         
         // use NSURLSessionDataTask
-        var task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { data, response, error in
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { data, response, error in
             if (error == nil) {
-                var result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
                 let data = result.dataUsingEncoding(NSUTF8StringEncoding)
                 do {
                     let content: [String: AnyObject] = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [String: AnyObject]
@@ -191,14 +190,14 @@ extension String
     
     func subString(startIndex: Int, length: Int) -> String
     {
-        var start = self.startIndex.advancedBy(startIndex)
-        var end = self.startIndex.advancedBy(startIndex + length)
-        return self.substringWithRange(Range<String.Index>(start: start, end: end))
+        let start = self.startIndex.advancedBy(startIndex)
+        let end = self.startIndex.advancedBy(startIndex + length)
+        return self.substringWithRange(start..<end)
     }
     
     func indexOf(target: String) -> Int
     {
-        var range = self.rangeOfString(target)
+        let range = self.rangeOfString(target)
         if let range = range {
             return self.startIndex.distanceTo(range.startIndex)
         } else {
@@ -208,9 +207,9 @@ extension String
     
     func indexOf(target: String, startIndex: Int) -> Int
     {
-        var startRange = self.startIndex.advancedBy(startIndex)
+        let start = self.startIndex.advancedBy(startIndex)
         
-        var range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: Range<String.Index>(start: startRange, end: self.endIndex))
+        let range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: start..<self.endIndex)
         
         if let range = range {
             return self.startIndex.distanceTo(range.startIndex)
@@ -238,7 +237,7 @@ extension String
 
 extension NSDictionary{
     func paramsString() -> String {
-        var pairs = NSMutableArray()
+        let pairs = NSMutableArray()
         for (key,value) in self as! [String:AnyObject]  {
             if value is NSDictionary {
                 for (dictKey,dictValue) in value as! [String:String]{
