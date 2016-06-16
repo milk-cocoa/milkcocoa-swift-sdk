@@ -189,16 +189,6 @@ extension String
         }
     }
     
-    func contains(s: String) -> Bool
-    {
-        return (self.rangeOfString(s) != nil) ? true : false
-    }
-    
-    func replace(target: String, withString: String) -> String
-    {
-        return self.stringByReplacingOccurrencesOfString(target, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
-    }
-    
     subscript (i: Int) -> Character
         {
         get {
@@ -261,72 +251,6 @@ extension String
             }
         }
         return index
-    }
-    
-    func isMatch(regex: String, options: NSRegularExpressionOptions) -> Bool
-    {
-        do {
-            var exp = try NSRegularExpression(pattern: regex, options: options)
-            var matchCount = exp.numberOfMatchesInString(self, options: NSMatchingOptions.Anchored, range: NSMakeRange(0, self.length))
-            return matchCount > 0
-
-        } catch let error as NSError {
-            print(error.description)
-        }
-        return false;
-    }
-    
-    func getMatches(regex: String, options: NSRegularExpressionOptions) -> [NSTextCheckingResult]
-    {
-        do {
-            var exp = try NSRegularExpression(pattern: regex, options: options)
-            var matches = exp.matchesInString(self, options: NSMatchingOptions.Anchored, range: NSMakeRange(0, self.length))
-            return matches as [NSTextCheckingResult]
-        } catch let error as NSError {
-            print(error.description)
-        }
-        
-        return [];
-    }
-    
-    private var vowels: [String]
-        {
-        get
-        {
-            return ["a", "e", "i", "o", "u"]
-        }
-    }
-    
-    private var consonants: [String]
-        {
-        get
-        {
-            return ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"]
-        }
-    }
-    
-    func pluralize(count: Int) -> String
-    {
-        if count == 1 {
-            return self
-        } else {
-            var lastChar = self.subString(self.length - 1, length: 1)
-            var secondToLastChar = self.subString(self.length - 2, length: 1)
-            var prefix = "", suffix = ""
-            
-            if lastChar.lowercaseString == "y" && vowels.filter({x in x == secondToLastChar}).count == 0 {
-                prefix = self[0...self.length - 1]
-                suffix = "ies"
-            } else if lastChar.lowercaseString == "s" || (lastChar.lowercaseString == "o" && consonants.filter({x in x == secondToLastChar}).count > 0) {
-                prefix = self[0...self.length]
-                suffix = "es"
-            } else {
-                prefix = self[0...self.length]
-                suffix = "s"
-            }
-            
-            return prefix + (lastChar != lastChar.uppercaseString ? suffix : suffix.uppercaseString)
-        }
     }
 }
 
