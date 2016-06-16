@@ -39,8 +39,8 @@ public class MilkCocoa : CocoaMQTTDelegate {
     private var onConnect:MilkCocoa->Void
     
     public init(app_id: String, host: String, onConnect:MilkCocoa->Void) {
-        self.app_id = app_id;
-        self.host = host;
+        self.app_id = app_id
+        self.host = host
         self.dataStores = Dictionary<String, DataStore>()
         self.onConnect = onConnect
         let clientIdPid = "sw" + String(NSProcessInfo().processIdentifier)
@@ -56,16 +56,16 @@ public class MilkCocoa : CocoaMQTTDelegate {
     }
     
     public func dataStore(path: String)->DataStore {
-        self.dataStores[path] = DataStore(milkcocoa: self, path: path);
+        self.dataStores[path] = DataStore(milkcocoa: self, path: path)
         return self.dataStores[path]!
     }
     
     public func publish(path : String, event : String, params : [String: AnyObject]) {
-        let topic:String = self.app_id + "/" + path + "/" + event;
+        let topic:String = self.app_id + "/" + path + "/" + event
         do {
             let data:NSData? = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions())
             let payload:NSString = NSString(data:data!, encoding:NSUTF8StringEncoding)!
-            self.mqtt.publish(topic, withString: payload as String, qos: CocoaMQTTQOS.QOS0);
+            self.mqtt.publish(topic, withString: payload as String, qos: CocoaMQTTQOS.QOS0)
         } catch let error as NSError {
             // Handle any errors
             print(error)
@@ -73,7 +73,7 @@ public class MilkCocoa : CocoaMQTTDelegate {
     }
     
     public func subscribe(path : String, event : String) {
-        let topic:String = self.app_id + "/" + path + "/" + event;
+        let topic:String = self.app_id + "/" + path + "/" + event
         mqtt.subscribe(topic, qos: CocoaMQTTQOS.QOS0)
     }
     
@@ -99,9 +99,9 @@ public class MilkCocoa : CocoaMQTTDelegate {
         let decided_string = message.string!.dataUsingEncoding(NSUTF8StringEncoding)
         do {
             let content: [String: AnyObject] = try NSJSONSerialization.JSONObjectWithData(decided_string!, options: NSJSONReadingOptions.AllowFragments) as! [String: AnyObject]
-            let index1:Int = message.topic.indexOf("/");
-            let index2:Int = message.topic.lastIndexOf("/");
-            let length:Int = message.topic.length;
+            let index1:Int = message.topic.indexOf("/")
+            let index2:Int = message.topic.lastIndexOf("/")
+            let length:Int = message.topic.length
             let path:String = message.topic.subString(index1+1, length: index2-index1-1)
             let event:String = message.topic.subString( index2+1, length: length - index2 - 1 )
             if let ds = self.dataStores[path] {
@@ -144,10 +144,10 @@ public class MilkCocoa : CocoaMQTTDelegate {
 
     
     public func call(api:String, params: NSMutableDictionary, callback: (Dictionary<String, AnyObject>)->Void, error_handler: (NSError)->Void) {
-        params["api"] = api;
-        params["appid"] = self.app_id;
-        //params["mlkccasid"] = self.session_id;
-        getAsync("/api", params: params, callback: callback, error_handler: error_handler);
+        params["api"] = api
+        params["appid"] = self.app_id
+        //params["mlkccasid"] = self.session_id
+        getAsync("/api", params: params, callback: callback, error_handler: error_handler)
     }
     
     private func getAsync(path : String, params: NSDictionary, callback: (Dictionary<String, AnyObject>)->Void, error_handler: (NSError)->Void) {
