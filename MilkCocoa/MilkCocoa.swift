@@ -189,24 +189,6 @@ extension String
         }
     }
     
-    subscript (i: Int) -> Character
-        {
-        get {
-            let index = startIndex.advancedBy(i)
-            return self[index]
-        }
-    }
-    
-    subscript (r: Range<Int>) -> String
-        {
-        get {
-            let startIndex = self.startIndex.advancedBy(r.startIndex)
-            let endIndex = self.startIndex.advancedBy(r.endIndex - 1)
-            
-            return self[Range(start: startIndex, end: endIndex)]
-        }
-    }
-    
     func subString(startIndex: Int, length: Int) -> String
     {
         var start = self.startIndex.advancedBy(startIndex)
