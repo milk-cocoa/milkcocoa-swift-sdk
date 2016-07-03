@@ -25,14 +25,6 @@
 		9216A8D71BE87EDA009B9845 /* MilkCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9216A8CC1BE87EDA009B9845 /* MilkCocoa.framework */; };
 		9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */; };
 		9216A8E91BE87FFE009B9845 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8E81BE87FFE009B9845 /* DataStore.swift */; };
-		92C58F5B1C0CD47B001B5FE5 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92C58F5C1C0CD47B001B5FE5 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */; };
-		92C58F5E1C0CD47B001B5FE5 /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92C58F5F1C0CD47B001B5FE5 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */; };
-		92C58F611C0CD47B001B5FE5 /* CocoaMQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */; };
-		92C58F631C0CD47B001B5FE5 /* CocoaMQTTFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */; };
-		92C58F651C0CD47B001B5FE5 /* CocoaMQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */; };
-		92C58F671C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92C58F741C0CE5AD001B5FE5 /* MilkCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */; };
 		FBB0CC6710E4296A3F1C68C0 /* Pods_MilkCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60900D51E68331CFA1FA5AAB /* Pods_MilkCocoa.framework */; };
 /* End PBXBuildFile section */
@@ -58,14 +50,6 @@
 		9216A8DD1BE87EDA009B9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkCocoa.swift; sourceTree = "<group>"; };
 		9216A8E81BE87FFE009B9845 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
-		92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
-		92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTT.swift; sourceTree = "<group>"; };
-		92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTFrame.swift; sourceTree = "<group>"; };
-		92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTMessage.swift; sourceTree = "<group>"; };
-		92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MilkCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
 		BBF7B86A46CE8A658403E097 /* Pods-MilkCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MilkCocoa/Pods-MilkCocoa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,14 +96,6 @@
 		9216A8CE1BE87EDA009B9845 /* MilkCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				92C58F521C0CD47B001B5FE5 /* GCDAsyncSocket.h */,
-				92C58F531C0CD47B001B5FE5 /* GCDAsyncSocket.m */,
-				92C58F541C0CD47B001B5FE5 /* MSWeakTimer.h */,
-				92C58F551C0CD47B001B5FE5 /* MSWeakTimer.m */,
-				92C58F561C0CD47B001B5FE5 /* CocoaMQTT.swift */,
-				92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */,
-				92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */,
-				92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */,
 				9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */,
 				9216A8D11BE87EDA009B9845 /* Info.plist */,
 				9216A8E61BE87FB3009B9845 /* MilkCocoa.swift */,
@@ -162,9 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9216A8D01BE87EDA009B9845 /* MilkCocoa.h in Headers */,
-				92C58F671C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h in Headers */,
-				92C58F5E1C0CD47B001B5FE5 /* MSWeakTimer.h in Headers */,
-				92C58F5B1C0CD47B001B5FE5 /* GCDAsyncSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,13 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C58F5C1C0CD47B001B5FE5 /* GCDAsyncSocket.m in Sources */,
-				92C58F611C0CD47B001B5FE5 /* CocoaMQTT.swift in Sources */,
-				92C58F5F1C0CD47B001B5FE5 /* MSWeakTimer.m in Sources */,
 				9216A8E71BE87FB3009B9845 /* MilkCocoa.swift in Sources */,
 				9216A8E91BE87FFE009B9845 /* DataStore.swift in Sources */,
-				92C58F651C0CD47B001B5FE5 /* CocoaMQTTMessage.swift in Sources */,
-				92C58F631C0CD47B001B5FE5 /* CocoaMQTTFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
