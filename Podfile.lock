@@ -1,0 +1,24 @@
+PODS:
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaMQTT (1.0.7):
+    - CocoaAsyncSocket (~> 7.4.2)
+    - MSWeakTimer (~> 1.1.0)
+  - MSWeakTimer (1.1.0)
+
+DEPENDENCIES:
+  - CocoaMQTT
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaMQTT: 28160fd4f599285000b8f321d4f11a6fb0d48d01
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
+
+PODFILE CHECKSUM: a95ef8359513547e121c99528d2b7a8c48ef9eba
+
+COCOAPODS: 1.0.1

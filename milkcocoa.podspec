@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.1"
 
   s.source       = { :git => "https://github.com/mokemoko/milkcocoa-swift-sdk.git", :tag => "#{s.version}" }
+  s.source_files = "MilkCocoa/*.{h,m,swift}"
 
-  s.source_files  = "MilkCocoa/*.{h,m,swift}"
+  s.dependency "CocoaMQTT", "~> 1.0.7"
 end

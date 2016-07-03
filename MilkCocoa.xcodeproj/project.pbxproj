@@ -34,6 +34,7 @@
 		92C58F651C0CD47B001B5FE5 /* CocoaMQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */; };
 		92C58F671C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92C58F741C0CE5AD001B5FE5 /* MilkCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216A8DB1BE87EDA009B9845 /* MilkCocoaTests.swift */; };
+		FBB0CC6710E4296A3F1C68C0 /* Pods_MilkCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60900D51E68331CFA1FA5AAB /* Pods_MilkCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BAAF69B196A7CCF72EDEBAF /* Pods-MilkCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MilkCocoa/Pods-MilkCocoa.debug.xcconfig"; sourceTree = "<group>"; };
+		60900D51E68331CFA1FA5AAB /* Pods_MilkCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MilkCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9216A8CC1BE87EDA009B9845 /* MilkCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MilkCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9216A8CF1BE87EDA009B9845 /* MilkCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MilkCocoa.h; sourceTree = "<group>"; };
 		9216A8D11BE87EDA009B9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		92C58F571C0CD47B001B5FE5 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTFrame.swift; sourceTree = "<group>"; };
 		92C58F581C0CD47B001B5FE5 /* CocoaMQTTMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaMQTTMessage.swift; sourceTree = "<group>"; };
 		92C58F591C0CD47B001B5FE5 /* MilkCocoa-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MilkCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
+		BBF7B86A46CE8A658403E097 /* Pods-MilkCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MilkCocoa/Pods-MilkCocoa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB0CC6710E4296A3F1C68C0 /* Pods_MilkCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,8 @@
 				9216A8CE1BE87EDA009B9845 /* MilkCocoa */,
 				9216A8DA1BE87EDA009B9845 /* MilkCocoaTests */,
 				9216A8CD1BE87EDA009B9845 /* Products */,
+				EB7F468B97B68A4858F6C49F /* Pods */,
+				B591942445F082E47E94261E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +137,23 @@
 			path = MilkCocoaTests;
 			sourceTree = "<group>";
 		};
+		B591942445F082E47E94261E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60900D51E68331CFA1FA5AAB /* Pods_MilkCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB7F468B97B68A4858F6C49F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BAAF69B196A7CCF72EDEBAF /* Pods-MilkCocoa.debug.xcconfig */,
+				BBF7B86A46CE8A658403E097 /* Pods-MilkCocoa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -151,10 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9216A8E01BE87EDA009B9845 /* Build configuration list for PBXNativeTarget "MilkCocoa" */;
 			buildPhases = (
+				2247DDC6AC61C60E24893E47 /* [CP] Check Pods Manifest.lock */,
 				9216A8C71BE87EDA009B9845 /* Sources */,
 				9216A8C81BE87EDA009B9845 /* Frameworks */,
 				9216A8C91BE87EDA009B9845 /* Headers */,
 				9216A8CA1BE87EDA009B9845 /* Resources */,
+				FE08A870DDBB9FC9685F51C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +267,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2247DDC6AC61C60E24893E47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		92C58F4F1C0CC048001B5FE5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +294,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+		};
+		FE08A870DDBB9FC9685F51C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MilkCocoa/Pods-MilkCocoa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -383,6 +439,7 @@
 		};
 		9216A8E11BE87EDA009B9845 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAAF69B196A7CCF72EDEBAF /* Pods-MilkCocoa.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -408,6 +465,7 @@
 		};
 		9216A8E21BE87EDA009B9845 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBF7B86A46CE8A658403E097 /* Pods-MilkCocoa.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -513,6 +571,7 @@
 				92C58F4E1C0CC03A001B5FE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
