@@ -29,6 +29,7 @@ SOFTWARE.
 */
 
 import Foundation
+import CocoaMQTT
 
 public class MilkCocoa : CocoaMQTTDelegate {
     
@@ -89,6 +90,10 @@ public class MilkCocoa : CocoaMQTTDelegate {
     
     public func mqtt(mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
         print("didPublishMessage to \(message.topic)")
+    }
+    
+    public func mqtt(mqtt: CocoaMQTT, didPublishAck id: UInt16) {
+        print("didPublishAck with id: \(id)")
     }
     
     public func mqtt(mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
