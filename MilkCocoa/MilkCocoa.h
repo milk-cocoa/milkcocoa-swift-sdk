@@ -29,9 +29,6 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <MilkCocoa/MilkCocoa-Bridging-Header.h>
-
-
 
 //! Project version number for MilkCocoa.
 FOUNDATION_EXPORT double MilkCocoaVersionNumber;
@@ -40,5 +37,3 @@ FOUNDATION_EXPORT double MilkCocoaVersionNumber;
 FOUNDATION_EXPORT const unsigned char MilkCocoaVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MilkCocoa/PublicHeader.h>
-
-
